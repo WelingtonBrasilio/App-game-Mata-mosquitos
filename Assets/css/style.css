@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+    cursor: url(../img/mata_mosca.png), default;
+}
+
+.selecao{
+    width: 100vw;
+    height: 100vh;
+}
+
+.niveis{
+    width: 250px;
+}
+
+/* Continuar depois nas paginas de games, fazer estilos 1 e depois mexer no js */
+
+.jogo{
+    width: 100vw;
+    height: 90vh;
+}
+
+.tempo{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 15vw;
+    height: 10vh;
+}
