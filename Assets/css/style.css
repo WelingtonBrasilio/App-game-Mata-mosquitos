@@ -19,15 +19,35 @@ body{
     width: 250px;
 }
 
-/* Continuar depois nas paginas de games, fazer estilos 1 e depois mexer no js */
-
-.jogo{
-    width: 100vw;
-    height: 90vh;
-}
-
-.tempo{
+.status{
+    position: fixed;
+    bottom: 0;
+    left: 0;
     background-color: rgba(255, 255, 255, 0.6);
     width: 15vw;
     height: 10vh;
+}
+
+/*Estilo dos mosquitos em exibição*/
+.mosquito{
+    height: 50px;
+    width: 50px;
+}
+
+.mosquitoMedio{
+    height: 70px;
+    width: 70px;
+}
+
+.mosquitoGrande{
+    height: 90px;
+    width: 90px;
+}
+
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
 }
