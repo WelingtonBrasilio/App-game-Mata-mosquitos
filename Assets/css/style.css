@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: content-box;
 }
+html{
+    cursor: url(../img/mata_mosca.png) 30 30, auto;
+}
 
 body{
     background: url(../img/bg.jpg) no-repeat;
     background-size: cover;
-    cursor: url(../img/mata_mosca.png), default;
 }
 
 .selecao{
