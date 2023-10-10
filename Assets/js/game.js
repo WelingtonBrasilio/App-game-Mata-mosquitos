@@ -1,8 +1,22 @@
-
-
 let altura = 0
 let largura = 0
 let vidas = 1
+let tempo = 10
+let criaMosquitoTempo = 1500
+
+let nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'normal'){
+    //1500
+    criaMosquitoTempo = 1500
+} else if(nivel === 'dificil'){
+    //1000
+    criaMosquitoTempo = 1000
+} else if(nivel === 'chucknorris'){
+    //750
+    criaMosquitoTempo = 750
+}
 
 //Tamanho da tela de exibição do jogo
 function telaJogo(){
@@ -12,6 +26,18 @@ function telaJogo(){
 
 telaJogo()
 
+var cronometro = setInterval(() => {
+
+    tempo -= 1
+    if(tempo < 0){
+        clearInterval(cronometro)
+        clearInterval(criaMosquito)
+        window.location.href = 'vitoria.html'
+    }else{
+    document.getElementById('cronometro').innerHTML = tempo }
+}, 1000);
+
+
 //Define a posição do mosquito na tela
 function posicaoMosquito(){
     //remove o mosquito anterior caso exista
@@ -20,7 +46,7 @@ function posicaoMosquito(){
 
         //remove coração caso o mosquito não seja eliminado pelo jogador
         if(vidas > 3){
-            alert('Game over')
+            window.location.href = 'derrota.html'
         }else{
         document.getElementById('v' + vidas).src="Assets/img/coracao_vazio.png"
         vidas++
