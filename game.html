@@ -14,6 +14,8 @@
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/83ccff58df.js" crossorigin="anonymous"></script>
 
+    <script src="Assets/js/game.js"></script>
+
     <title>App game - Mata mosquitos</title>
   </head>
   <body onresize="telaJogo()">
@@ -29,13 +31,11 @@
       </div>
 
     <!-- JavaScript (Opcional) -->
-    <script src="Assets/js/game.js"></script>
     <script>
       document.getElementById('cronometro').innerHTML = tempo
-
       let criaMosquito = setInterval(() => {
         posicaoMosquito()
-      }, 2000)
+      },criaMosquitoTempo)
       posicaoMosquito()
     </script>
 
