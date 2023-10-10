@@ -14,19 +14,31 @@
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/83ccff58df.js" crossorigin="anonymous"></script>
 
+    <script>
+      const iniciarJogo = () => {
+        let nivel = document.getElementById('nivel').value
+        if(nivel === ''){
+          alert('Selecione um nivel para iniciar o jogo')
+          return false
+        }
+        
+        alert(nivel)
+      }
+    </script>
+
     <title>Home - Mata mosquitos</title>
   </head>
   <body>
     <main class="d-flex align-items-center justify-content-center">
       <div class="selecao d-flex flex-column align-items-center justify-content-center">
         <img src="Assets/img/game.png" alt="">
-        <select class="form-select text-center niveis">
-          <option selected>-- Selecione o nível --</option>
-          <option value="1">Normal</option>
-          <option value="2">Dificíl</option>
-          <option value="3">Chuck Norris</option>
+        <select  id="nivel" class="form-select text-center niveis">
+          <option value="">-- Selecione o nível --</option>
+          <option value="Normal">Normal</option>
+          <option value="Dificíl">Dificíl</option>
+          <option value="Chucknorris">Chuck Norris</option>
         </select>
-        <button class="btn btn-lg btn-danger mt-3 px-4" type="submit">Iniciar jogo</button>
+        <button class="btn btn-lg btn-danger mt-3 px-4" onclick="iniciarJogo()">Iniciar jogo</button>
       </div>
     </main>
     
