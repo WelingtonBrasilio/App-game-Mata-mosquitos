@@ -2,6 +2,7 @@
 
 let altura = 0
 let largura = 0
+let vidas = 1
 
 //Tamanho da tela de exibição do jogo
 function telaJogo(){
@@ -16,6 +17,15 @@ function posicaoMosquito(){
     //remove o mosquito anterior caso exista
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
+
+        //remove coração caso o mosquito não seja eliminado pelo jogador
+        if(vidas > 3){
+            alert('Game over')
+        }else{
+        document.getElementById('v' + vidas).src="Assets/img/coracao_vazio.png"
+        vidas++
+
+        }
     }
 
     let posicaoX = Math.floor(Math.random() * largura) - 90
@@ -34,6 +44,9 @@ function posicaoMosquito(){
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+    mosquito.onclick = function(){
+        this.remove()
+    }
 
     document.body.appendChild(mosquito)
 
